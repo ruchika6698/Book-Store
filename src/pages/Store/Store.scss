@@ -1,0 +1,206 @@
+@import "./../../css/utility.scss";
+
+@mixin popup {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  // text-align: left;
+}
+
+.storeContainer {
+  position: relative;
+  margin-top: 65px;
+  padding-bottom: 100px;
+}
+.popup-hidden {
+  @include popup();
+  visibility: hidden;
+
+  & .popupDialog {
+    visibility: hidden;
+  }
+}
+
+.popup-show {
+  @include popup();
+  visibility: visible;
+
+  & .popupDialog {
+    visibility: visible;
+  }
+}
+
+.popupDialog {
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  box-shadow: $shadow;
+  background-color: $color-white;
+  width: 300px;
+  height: 400px;
+  font-family: $font;
+  // display: none;
+}
+
+.popupHeader {
+  margin: 10px;
+  text-align: center;
+  font-size: 16px;
+  color: $color-error;
+}
+
+.popupHeaderLogo {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-primary;
+  align-self: stretch;
+  align-items: center;
+  justify-content: space-around;
+  color: $color-white;
+  height: 80px;
+  padding: 10px 10px;
+  font-size: 20px;
+}
+
+.popupDeclaration {
+  margin: auto;
+
+  align-self: center;
+  justify-self: center;
+  padding: 20px 10px;
+  font-size: 18px;
+  text-align: center;
+
+  font-weight: 600;
+}
+
+.popupInfo {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  justify-self: center;
+  justify-content: space-evenly;
+  padding: 10px 0;
+  background-color: $color-white;
+  font-size: 18px;
+}
+
+.popupKey {
+  // display: flex;
+  // flex-direction: column;
+  // align-items: flex-end;
+  // justify-content: space-evenly;
+  // margin: 20px;
+}
+.popupButtons {
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // justify-content: space-evenly;
+}
+.popupButtons .button {
+  padding: 3px 10px;
+  margin: 2px 5px;
+  background-color: $color-secondary;
+  width: 100px;
+  font-family: $font;
+  font-size: 16px;
+  text-align: center;
+
+  border-radius: 3px;
+  cursor: pointer;
+  color: $color-white;
+  font-weight: 500;
+  text-transform: uppercase;
+  outline: none;
+  border: none;
+}
+.booksHeader {
+  padding: 50px 0 10px 45px;
+  font-family: "Lato", sans-serif;
+  font-size: 25px;
+
+  & span {
+    font-size: 14px;
+  }
+}
+
+.opendropdown {
+  position: absolute;
+  background-color: $color-white;
+}
+
+.closedropdown {
+  position: absolute;
+  visibility: hidden;
+}
+
+.booksSort {
+  position: relative;
+  padding: 50px 45px 10px 0;
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+  flex-shrink: 1;
+  cursor: pointer;
+
+  & .dropdown {
+    border: 2px solid #e2e2e2;
+    width: 175px;
+    padding: 2px 5px;
+    font-size: 14px;
+  }
+  & span {
+    padding-right: 30px;
+  }
+
+  &:hover .opendropdown {
+    visibility: hidden;
+  }
+
+  &:hover .closedropdown {
+    visibility: visible;
+  }
+
+  &:hover .dropmenu {
+    visibility: visible;
+    display: initial;
+  }
+}
+
+.dropmenu {
+  position: absolute;
+  font-size: 14px;
+  list-style: none;
+  padding: 5px 24.5px 0 24.5px;
+  top: 62px;
+  background-color: $color-white;
+  visibility: hidden;
+  display: none;
+  border: 2px solid $color-book-border;
+  z-index: 3;
+
+  & li {
+    font-size: 14px;
+
+    padding: 0 0 5px 0;
+    cursor: pointer;
+  }
+}
+
+.booksContainer {
+  padding-bottom: 20px;
+}
+
+.singleBookContainer {
+  padding: 20px 0;
+}
+
+.pagination {
+  padding-bottom: 30px;
+}

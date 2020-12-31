@@ -1,0 +1,111 @@
+@import "./../../css/utility.scss";
+
+.orderPage {
+  // background-color: $color-white;
+}
+.order {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+}
+.orderimage {
+  // margin-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+.image {
+  width: 350px;
+}
+.paymentComfirm {
+  max-width: 300px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 18px;
+}
+.table {
+  max-width: 700px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.aboutus {
+  display: flex;
+  flex-direction: row;
+}
+.email {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  word-wrap: break-word !important;
+}
+
+@media only screen and (max-width: 1024px) {
+  .orderPage {
+    padding-bottom: 150px;
+  }
+  .order {
+    margin-top: 350px;
+    padding-bottom: 0px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .order {
+    margin-top: 130px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .orderimage {
+    margin-top: 30px;
+  }
+  .orderPage {
+    padding-bottom: 0px;
+  }
+  .table {
+    width: 400px;
+  }
+  .aboutus {
+    flex-direction: column;
+  }
+  .email {
+    width: 100%;
+    flex-direction: row;
+  }
+  .header {
+    padding: 15px 15px 15px 15px;
+  }
+  .button-Login {
+    margin-bottom: 30px !important;
+  }
+}
+@media only screen and (max-width: 414px) {
+  .table {
+    width: 350px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .table {
+    width: 300px;
+  }
+  .image {
+    width: 300px;
+  }
+}
+@media only screen and (max-width: 280px) {
+  .table {
+    width: 260px;
+  }
+  .image {
+    width: 260px;
+  }
+}

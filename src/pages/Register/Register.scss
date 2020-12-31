@@ -1,0 +1,105 @@
+@import "./../../css/utility.scss";
+
+@mixin felx() {
+    display: flex;
+    justify-content: center;
+}
+.register {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    @include felx();
+}
+.registerLogo {
+    background-color: $color-primary;
+    padding: 10px 0px;
+}
+.registerCard {
+    max-width: 550px;
+    width: 100%;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+.createAccount {
+    @include felx();
+    font-weight: 500;
+    font-size: 28px;
+    color: $color-primary;
+}
+.registerform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & .name {
+        width: 80%;
+    }
+    & .submitbutton {
+        background-color: $color-secondary;
+        width: 80%;
+        padding: 7px 0px;
+        font-size: 12px;
+    }
+    & .textline {
+        word-wrap: break-word;
+        width: 80%;
+        padding-left: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &.accountExsists {
+        display: flex;
+        flex-direction: row;
+    }
+    &.text {
+        padding-top: 5px;
+    }
+    &.signInstead {
+        width: 150px;
+        padding: 7px 0px;
+        color: $color-secondary;
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .register {
+        margin-top: 250px;
+        margin-bottom: 20px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .register {
+        margin-top: 90px;
+    }
+}
+@media only screen and (max-width: 450px) {
+    .register {
+        margin-top: 60px;
+    }
+    .registerCard {
+        border: none !important;
+        padding-bottom: 100px;
+    }
+}
+@media only screen and (max-width: 414px) {
+    .registerCard {
+        padding-top: 30px;
+        padding-bottom: 100px;
+    }
+    .accountExsists {
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width: 411px) {
+    .registerCard {
+        padding-top: 30px;
+        padding-bottom: 100px;
+    }
+}
+@media only screen and (max-width: 360px) {
+    .registerCard {
+        padding-top: 20px;
+        padding-bottom: 100px;
+    }
+}

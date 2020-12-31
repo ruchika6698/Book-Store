@@ -1,0 +1,112 @@
+@import "./../../css//utility.scss";
+
+.profile {
+    margin-top: 150px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    font-family: $font;
+}
+.profileCard {
+    max-width: 650px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    box-shadow: inset 0px 1px 20px $color-primary;
+}
+
+.profileImage {
+    width: 80%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-bottom: 2px solid $color-primary;
+}
+
+.profiledetails {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.profileName {
+    width: 80%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.profileValue {
+    width: 80%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.wishlistContainer {
+    position: relative;
+    margin-top: 20px;
+    padding-bottom: 100px;
+}
+@media only screen and (max-width: 1024px) {
+    .profile {
+        margin-top: 100px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .profile {
+        margin-top: 100px;
+    }
+}
+@media only screen and (max-width: 450px) {
+    .profile {
+        margin-top: 70px;
+        margin-bottom: 0px;
+    }
+    .profileCard {
+        border: none !important;
+    }
+}
+@media only screen and (max-width: 414px) {
+    .profile {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .profileCard {
+        border: none !important;
+        padding-top: 100px;
+    }
+}
+@media only screen and (max-width: 414px) {
+    .profileCard {
+        padding-top: 100px;
+    }
+}
+@media only screen and (max-width: 360px) {
+    .profileCard {
+        padding-top: 100px;
+    }
+
+    .profiledetails {
+        width: 100%;
+    }
+
+    .profileName {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 320px) {
+    .profileCard {
+        padding-top: 100px;
+    }
+}
+@media only screen and (max-width: 280px) {
+    .profile {
+        //    margin-top:100px;
+        margin-bottom: 0px;
+    }
+}

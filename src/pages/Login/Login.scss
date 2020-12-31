@@ -1,0 +1,118 @@
+@import "./../../css/utility.scss";
+
+@mixin flex() {
+	display: flex;
+	justify-content: center;
+}
+.Login {
+	margin-top: 180px;
+	margin-bottom: 50px;
+	@include flex();
+}
+
+.logo {
+	margin-top: 20px;
+}
+.loginImage {
+	@include flex();
+	padding-top: 30px;
+}
+.Bookstore {
+	margin-top: 20px;
+	font-weight: bold;
+	padding-left: 0% !important;
+	@include flex();
+}
+.LoginCard {
+	max-width: 550px;
+	width: 100%;
+	align-items: center;
+	padding-top: 20px;
+	padding-bottom: 70px;
+	font-family: $font;
+}
+.Bookstore {
+	padding-left: 55px;
+	font-weight: 500;
+	font-size: 28px;
+	color: $color-primary;
+}
+.Loginform {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: $font;
+	& .name {
+		width: 80%;
+	}
+	& .submitbutton {
+		width: 80%;
+		padding: 7px 0px;
+		font-size: 12px;
+	}
+	& .buttonLogin {
+		width: 80%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	& .signup {
+		color: $color-secondary;
+	}
+
+	& .button-Login {
+		background-color: $color-secondary;
+	}
+}
+@media only screen and (max-width: 1024px) {
+	.Login {
+		margin-top: 400px;
+		margin-bottom: 15px;
+	}
+}
+@media only screen and (max-width: 768px) {
+	.Login {
+		margin-top: 240px;
+		margin-bottom: 100px;
+	}
+}
+@media only screen and (max-width: 450px) {
+	.Login {
+		margin-top: 50px;
+		margin-bottom: -40px;
+	}
+	.LoginCard {
+		border: none !important;
+		padding-bottom: 20px;
+	}
+}
+@media only screen and (max-width: 414px) {
+	.Login {
+		margin-top: 70px;
+		margin-bottom: -40px;
+	}
+	.LoginCard {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+	.buttonLogin {
+		display: flex;
+		flex-direction: column !important;
+		align-items: center;
+	}
+	.button-Login {
+		margin-top: 10px !important;
+	}
+}
+@media only screen and (max-width: 411px) {
+	.LoginCard {
+		padding-top: 80px;
+		padding-bottom: 100px;
+	}
+}
+@media only screen and (max-width: 360px) {
+	.LoginCard {
+		padding-top: 0px;
+		padding-bottom: 10px;
+	}
+}
